@@ -1,0 +1,8 @@
+# Render Blueprint: New + > Blueprint, pick this repo. Or create a Web Service by hand (Runtime: Docker).
+services:
+  - type: web
+    name: driftwatch
+    runtime: docker
+    plan: free
+    healthCheckPath: /api/health
+    autoDeploy: true

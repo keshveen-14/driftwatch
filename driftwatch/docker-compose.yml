@@ -1,0 +1,8 @@
+services:
+  driftwatch:
+    build: .
+    ports: ["8000:8000"]
+    volumes: ["driftwatch-data:/data"]
+    restart: unless-stopped
+volumes:
+  driftwatch-data:
