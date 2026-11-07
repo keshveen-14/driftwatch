@@ -15,7 +15,7 @@ RUN pip install -r backend/requirements.txt
 COPY backend/ backend/
 COPY research/results research/results
 COPY --from=web /web/dist frontend/dist
-ENV DRIFTWATCH_DB=/data/driftwatch.db
+ENV DRIFTWATCH_DB_PATH=/data/driftwatch.db
 RUN mkdir -p /data && useradd -m app && chown -R app /data
 USER app
 ENV PORT=8000
